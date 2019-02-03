@@ -1,7 +1,9 @@
 main = do
     line <- getLine
     if null line
-        then return ()
+        then do
+             return ()
+             putStrLn "END."
         else do
             putStrLn $ reverseWords line
             main

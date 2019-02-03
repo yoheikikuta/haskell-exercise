@@ -1,7 +1,6 @@
 import System.IO
 
 main = do
-    handle <- openFile "baabaa.txt" ReadMode
+    withFile "baabaa.txt" ReadMode $ \handle -> do
     contents <- hGetContents handle
     putStr contents
-    hClose handle

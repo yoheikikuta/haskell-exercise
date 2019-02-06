@@ -12,3 +12,6 @@ landRight n (left, right)
     | otherwise                      = Nothing
 
 x -: f = f x
+
+banana :: Pole -> Maybe Pole
+banana _ = Nothing

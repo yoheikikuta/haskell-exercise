@@ -1,3 +1,13 @@
+import Data.Monoid
+
+type Food = String
+type Price = Sum Int
+
+addDrink :: Food -> (Food, Price)
+addDrink "beans" = ("milk", Sum 25)
+addDrink "jerkey" = ("whiskey", Sum 99)
+addDrink _ = ("beer", Sum 30)
+
 isBigGang :: Int -> (Bool, String)
 isBigGang x = (x > 9, "Compared gang size to 9.")
 
